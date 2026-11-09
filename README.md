@@ -6,7 +6,11 @@ BAYERNPASS ist eine offene, modulare und föderierte digitale Infrastruktur für
 
 > **Ein Zugang. Viele Dienste. Selbstbestimmte Daten. Echte Mitbestimmung.**
 
-BAYERNPASS soll den Zugang zu digitalen Angeboten vereinfachen, demokratische Beteiligung stärken und gemeinsame Standards schaffen – ohne ein zentrales Datensilo und ohne Menschen von einer einzelnen Identitätsanbieterin abhängig zu machen.
+## Live-Prototyp
+
+**[BAYERNPASS öffnen](https://bayernpass.vercel.app)**
+
+Der aktuelle Web-Prototyp bietet eine responsive Startseite, eine durchsuchbare Dienstelandschaft, Themenfilter, lokale Favoriten, einen Ideenraum und einen persönlichen Demo-Bereich.
 
 ## Was wir bauen
 
@@ -16,6 +20,16 @@ BAYERNPASS soll den Zugang zu digitalen Angeboten vereinfachen, demokratische Be
 - **Wallet-Integration:** vorbereitete Schnittstellen für BayernID und die European Digital Identity Wallet (EUDI Wallet), vorbehaltlich offizieller Integrationsmöglichkeiten.
 - **Föderation:** getrennte Datenräume und Zuständigkeiten für Kommunen, Freistaat, Vereine und Partner.
 - **Open Source:** nachvollziehbare Architektur, offene Schnittstellen und gemeinschaftliche Entwicklung.
+
+## Aktueller Funktionsumfang
+
+- Mobile-first Dashboard und Navigation.
+- Dienstesuche mit Themenfiltern.
+- Lokale Merkliste mit Speicherung im Browser.
+- Ideenformular und Demo-Unterstützungszähler.
+- Persönlicher Demo-Bereich mit verständlicher Erklärung der geplanten Identitätsarchitektur.
+
+**Wichtig:** Die Dienste sind Beispieldaten. Favoriten bleiben lokal im Browser. Ideen und Unterstützungen werden nicht an einen Server übermittelt. Es gibt noch keine echte Anmeldung, keine Behördenintegration und keine rechtsverbindliche Abstimmung.
 
 ## Architekturprinzipien
 
@@ -28,16 +42,14 @@ BAYERNPASS soll den Zugang zu digitalen Angeboten vereinfachen, demokratische Be
 
 ## Projektstatus
 
-**Phase 0 – Architektur- und Prototyp-Grundlage.** Dieses Repository enthält die Vision, Architekturleitlinien, Sicherheitsgrundsätze, Roadmap und einen ersten statischen Portal-Prototyp. Es ist noch kein produktives Verwaltungs- oder Identitätssystem.
+**Phase 0 – Architektur- und Prototyp-Grundlage.** Das Repository enthält die Vision, Architekturleitlinien, Sicherheitsgrundsätze, Roadmap und einen interaktiven Frontend-Prototyp. Es ist noch kein produktives Verwaltungs- oder Identitätssystem.
 
 ## Schnellstart
 
-Der erste Prototyp benötigt keine Installation:
+Der Frontend-Prototyp benötigt keine Installation:
 
 1. Repository klonen.
 2. `apps/bayernpass-web/index.html` im Browser öffnen.
-
-Für die spätere Web-App werden Framework, Build-System, Tests und Deployment gemeinsam festgelegt.
 
 ## Projektstruktur
 
