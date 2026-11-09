@@ -4,38 +4,83 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#123b70">
-  <meta name="description" content="BAYERNPASS – das offene Betriebssystem für Bayerns digitale Zukunft.">
+  <meta name="description" content="BAYERNPASS – das offene, digitale Betriebssystem für Bayerns Zukunft.">
   <title>BAYERNPASS – #UNSERBAYERN</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
   <header class="topbar">
-    <a class="brand" href="#" aria-label="BAYERNPASS Startseite"><span class="mark">✳</span> BAYERNPASS</a>
+    <a class="brand" href="#start" data-view="start" aria-label="BAYERNPASS Startseite"><span class="mark">✳</span> BAYERNPASS</a>
     <span class="tag">#BAYERNDERZUKUNFT</span>
+    <button class="login-button" id="login-button" type="button">Zugang testen ↗</button>
   </header>
-  <main>
-    <section class="hero">
-      <p class="eyebrow">DAS OFFENE BETRIEBSSYSTEM FÜR BAYERN</p>
-      <h1>Ein Bayern.<br><span>Viele Möglichkeiten.</span></h1>
-      <p class="lead">Ein einfacher Zugang zu digitalen Diensten, demokratischer Mitgestaltung und einer vernetzten Zukunft – offen, sicher und menschlich.</p>
-      <a class="primary" href="#bereiche">Bayern entdecken <span aria-hidden="true">→</span></a>
-      <div class="diamonds" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="demo-banner"><strong>PROTOTYP</strong><span>Eine offene Idee in Entwicklung – keine offizielle Plattform des Freistaats Bayern.</span></div>
+  <nav class="main-nav" aria-label="Hauptnavigation">
+    <button class="nav-link active" type="button" data-view="start" aria-current="page">Start</button>
+    <button class="nav-link" type="button" data-view="dienste">Dienste</button>
+    <button class="nav-link" type="button" data-view="mitgestalten">Mitgestalten</button>
+    <button class="nav-link" type="button" data-view="gemeinschaft">Gemeinschaft</button>
+  </nav>
+  <main id="main">
+    <section class="view active" id="view-start" aria-labelledby="hero-title">
+      <div class="hero">
+        <p class="eyebrow">DAS OFFENE BETRIEBSSYSTEM FÜR BAYERN</p>
+        <h1 id="hero-title">Ein Bayern.<br><span>Viele Möglichkeiten.</span></h1>
+        <p class="lead">Ein einfacher Zugang zu digitalen Diensten, demokratischer Mitgestaltung und einer vernetzten Zukunft – offen, sicher und menschlich.</p>
+        <div class="hero-actions">
+          <button class="primary" type="button" data-go="dienste">Dienste entdecken <span aria-hidden="true">→</span></button>
+          <button class="secondary" type="button" data-go="mitgestalten">Idee einbringen</button>
+        </div>
+        <div class="diamonds" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <section class="section">
+        <p class="eyebrow">EIN ZUGANG · VIELE MÖGLICHKEITEN</p>
+        <h2>Was möchtest du bewegen?</h2>
+        <div class="cards">
+          <article class="feature-card"><div class="symbol">◇</div><h3>Mitgestalten</h3><p>Ideen teilen, diskutieren und die Zukunft deiner Kommune mitgestalten.</p><button class="text-button" type="button" data-go="mitgestalten">Zum Ideenraum →</button><span class="status">Demo-Bereich</span></article>
+          <article class="feature-card"><div class="symbol">⌘</div><h3>Dienste finden</h3><p>Digitale Angebote und Anlaufstellen an einem Ort entdecken.</p><button class="text-button" type="button" data-go="dienste">Dienste ansehen →</button><span class="status">Beispieldaten</span></article>
+          <article class="feature-card"><div class="symbol">♧</div><h3>Gemeinschaft stärken</h3><p>Vereine, Kultur, Sport und lokale Initiativen sichtbar verbinden.</p><button class="text-button" type="button" data-go="gemeinschaft">Gemeinschaft entdecken →</button><span class="status">Beispieldaten</span></article>
+        </div>
+      </section>
+      <section class="principles">
+        <p class="eyebrow">UNSER FUNDAMENT</p><h2>Digital. Demokratisch. Menschlich.</h2>
+        <div class="principle-list"><span>Datenschutz zuerst</span><span>Offene Standards</span><span>Föderierte Datenhoheit</span><span>Für alle zugänglich</span></div>
+      </section>
     </section>
-    <section id="bereiche" class="section">
-      <p class="eyebrow">EIN ZUGANG · VIELE DIENSTE</p>
-      <h2>Was möchtest du bewegen?</h2>
-      <div class="cards">
-        <article><div class="symbol">◇</div><h3>Mitgestalten</h3><p>Ideen einbringen, diskutieren und die Zukunft deiner Kommune mitgestalten.</p><span class="status">Demokratie · in Entwicklung</span></article>
-        <article><div class="symbol">⌘</div><h3>Dienste finden</h3><p>Digitale Angebote von Kommunen und öffentlichen Einrichtungen an einem Ort entdecken.</p><span class="status">Serviceportal · Konzept</span></article>
-        <article><div class="symbol">♧</div><h3>Gemeinschaft stärken</h3><p>Vereine, Kultur, Sport und lokale Initiativen sichtbar miteinander verbinden.</p><span class="status">Ökosystem · Konzept</span></article>
+
+    <section class="view page-section" id="view-dienste" aria-labelledby="dienste-title" hidden>
+      <p class="eyebrow">BAYERN SERVICES</p><h1 id="dienste-title">Dienste entdecken.</h1>
+      <p class="page-intro">Ein gemeinsamer Einstieg zu Angeboten aus Stadt, Land und Gesellschaft. Die Einträge unten sind illustrative Beispieldaten – noch keine verbundenen Behördendienste.</p>
+      <div class="service-grid">
+        <article class="service-card"><span class="service-icon">⌂</span><div><h2>Rathaus & Verwaltung</h2><p>Anträge, Informationen und kommunale Anlaufstellen.</p><span class="status">Beispiel · nicht verbunden</span></div></article>
+        <article class="service-card"><span class="service-icon">♧</span><div><h2>Bildung & Familie</h2><p>Lernen, Betreuung und Angebote für Familien.</p><span class="status">Beispiel · nicht verbunden</span></div></article>
+        <article class="service-card"><span class="service-icon">＋</span><div><h2>Gesundheit & Soziales</h2><p>Orientierung zu Beratungs- und Unterstützungsangeboten.</p><span class="status">Beispiel · nicht verbunden</span></div></article>
+        <article class="service-card"><span class="service-icon">↗</span><div><h2>Mobilität & Umwelt</h2><p>Mobilitätsangebote, Klima- und Umweltinformationen.</p><span class="status">Beispiel · nicht verbunden</span></div></article>
       </div>
     </section>
-    <section class="principles">
-      <p class="eyebrow">UNSER FUNDAMENT</p>
-      <h2>Digital. Demokratisch. Menschlich.</h2>
-      <div class="principle-list"><span>Datenschutz zuerst</span><span>Offene Standards</span><span>Föderierte Datenhoheit</span><span>Für alle zugänglich</span></div>
+
+    <section class="view page-section" id="view-mitgestalten" aria-labelledby="mitgestalten-title" hidden>
+      <p class="eyebrow">BAYERN DEMOCRACY</p><h1 id="mitgestalten-title">Deine Idee zählt.</h1>
+      <p class="page-intro">Ein offener Ideenraum für konstruktive Vorschläge. In diesem MVP werden Beiträge nur in deinem aktuellen Browser angezeigt – sie werden nicht an eine Kommune übermittelt und sind keine offizielle Abstimmung.</p>
+      <div class="participation-layout">
+        <div><h2>Ideen aus der Gemeinschaft</h2><div id="proposal-list" class="proposal-list">
+          <article class="proposal-card"><span class="proposal-topic">MOBILITÄT · MUSTERBEITRAG</span><h3>Sichere Radwege rund um Schulen</h3><p>Wie können Schulwege sicherer und für alle Generationen gut nutzbar werden?</p><div class="proposal-actions"><button class="support-button" type="button" data-support>Unterstützen <span>12</span></button><span class="status">Nur Demo-Zähler</span></div></article>
+          <article class="proposal-card"><span class="proposal-topic">KULTUR · MUSTERBEITRAG</span><h3>Mehr Räume für lokale Kultur</h3><p>Leerstehende Räume zeitweise für Vereine, Musik und Begegnung öffnen.</p><div class="proposal-actions"><button class="support-button" type="button" data-support>Unterstützen <span>8</span></button><span class="status">Nur Demo-Zähler</span></div></article>
+        </div></div>
+        <form class="idea-form" id="idea-form"><h2>Eigene Idee einbringen</h2><label for="idea-title">Titel deiner Idee</label><input id="idea-title" name="title" maxlength="90" required placeholder="Worum geht es?"><label for="idea-topic">Themenbereich</label><select id="idea-topic" name="topic"><option>Mobilität</option><option>Umwelt</option><option>Kultur</option><option>Bildung</option><option>Gemeinschaft</option><option>Sonstiges</option></select><label for="idea-description">Kurzbeschreibung</label><textarea id="idea-description" name="description" maxlength="500" rows="5" required placeholder="Was möchtest du verändern?"></textarea><button class="primary" type="submit">Idee lokal hinzufügen</button><p class="form-note">Demo: keine Übertragung, kein Konto, keine Speicherung auf einem Server.</p><p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p></form>
+      </div>
+    </section>
+
+    <section class="view page-section" id="view-gemeinschaft" aria-labelledby="gemeinschaft-title" hidden>
+      <p class="eyebrow">BAYERN COMMUNITY</p><h1 id="gemeinschaft-title">Was uns verbindet.</h1>
+      <p class="page-intro">BAYERNPASS soll Menschen, Vereine und Initiativen sichtbar machen – von der Nachbarschaft bis zum ganzen Freistaat.</p>
+      <div class="community-grid"><article class="community-card"><span>♫</span><h2>Kultur & Musik</h2><p>Chöre, Blasmusik, Bühnen, Festivals und kreative Orte.</p></article><article class="community-card"><span>⚽</span><h2>Sport & Vereine</h2><p>Sportgemeinschaften, Ehrenamt und gemeinsames Engagement.</p></article><article class="community-card"><span>♡</span><h2>Nachbarschaft</h2><p>Lokale Initiativen, Hilfe und Begegnung im direkten Umfeld.</p></article></div>
+      <div class="callout"><h2>Gemeinsam besser werden.</h2><p>Die Gemeinschaftsseite ist ein Konzeptbereich. Ein echtes Verzeichnis benötigt Partner, Einwilligungen und verlässliche Datenquellen.</p><button class="secondary dark" type="button" data-go="mitgestalten">Vorschlag einbringen</button></div>
     </section>
   </main>
-  <footer><strong>#UNSERBAYERN</strong><span>Ein offenes Projekt in Entwicklung · Kein offizielles Landesportal</span><a href="https://github.com/HPGHuber/BAYERNPASS">Open Source auf GitHub ↗</a></footer>
+  <footer><strong>#UNSERBAYERN</strong><span>Open-Source-Prototyp · keine offizielle Landesplattform</span><a href="https://github.com/HPGHuber/BAYERNPASS">Projekt auf GitHub ↗</a></footer>
+  <dialog id="login-dialog" aria-labelledby="login-title"><div class="dialog-content"><button class="dialog-close" id="close-dialog" aria-label="Dialog schließen">×</button><p class="eyebrow">HEAVENKEY / BAYERNPASS</p><h2 id="login-title">Zugang – Demo</h2><p>Hier könnte später eine Anmeldung mit Passkey (WebAuthn) und angebundenen Identitätsdiensten starten.</p><p class="notice">In diesem Prototyp findet keine Authentifizierung statt. Es werden keine Zugangsdaten abgefragt.</p><button class="primary" id="understood-button" type="button">Verstanden</button></div></dialog>
 </body>
 </html>
